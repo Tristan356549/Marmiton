@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marmiton</title>
+    <link rel="stylesheet" href="CSS\style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Marmiton</h1>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="recettes.html">Toutes les recettes</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <a href="login.html" class="btn-primary" >Se connecter / S'inscrire</a>
+        </div>
+    </header>
+    <main class="container">
+        <section class="placement-login">
+            <div class="login">
+                <h3>Identifiant :</h3>
+                <input type="text" id="identifiant" placeholder="Entrez votre identifiant"><br>
+                <h3>Mot de passe avec masque :</h3>
+                <input type="password" id="password" placeholder="Entrez votre mot de passe"><br>
+                <input type="checkbox" id="showPassword" onclick="togglePassword()"> Afficher le mot de passe
+            </div>
+        </section>
+        <script src="login.js"></script>
+        <script>
+            function togglePassword() {
+                var passwordField = document.getElementById("password");
+                var checkbox = document.getElementById("showPassword");
+            
+                if (checkbox.checked) {
+                    passwordField.type = "text";
+                } else {
+                    passwordField.type = "password";
+                }
+            }
+        </script>
+
+    </main>
+    <footer class="container">
+        <p>Marmiton</p>
+        <nav>
+            <a href="index.html">Acceuil</a>
+            <a href="recettes.html">Toutes les recettes</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>&copy; Tous droit réservé : Promeo</p>
+    </footer>
+</body>
+</html>
